@@ -3,6 +3,8 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin'); // 压缩插件js
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // 压缩插件css
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // 打包时删除旧的dist
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin; // 打包结果分析
+const CompressionPlugin = require('compression-webpack-plugin');
 
 
 module.exports = {
@@ -126,7 +128,20 @@ module.exports = {
             chunkFilename: '[id].css',
             ignoreOrder: false, // Enable to remove warnings about conflicting order
         }),
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        new BundleAnalyzerPlugin({
+            analyzerMode: 'server',
+            analyzerPort: 8998,
+            generateStatsFile: true,
+            statsOptions: { source: false }
+        }),
+        new CompressionPlugin({
+            filename: '[path].gz[query]',
+            algorithm: "gzip",
+            test: /\.js$|\.css$/,
+            threshold: 10240,
+            minRatio: 0.8
+        })
     ],
 
     // 性能监测

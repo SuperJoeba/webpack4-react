@@ -8,7 +8,7 @@
 import ReactDOM from 'react-dom';
 import routes from './routes.js';
 
-
+document.body.style.height = window.innerHeight + 'px'
 ReactDOM.render(
     routes,
     document.getElementById('app')

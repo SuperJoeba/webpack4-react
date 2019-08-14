@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './index.css';
 
 class Index extends Component {
     constructor(props) {
@@ -20,6 +21,10 @@ class Index extends Component {
             <div>
                 hello React HotOnly
                 <button onClick={this.handleLogin}>去登陆</button>
+                <div className='bottom-box'>
+                    <input className="bottom-input" type="text" placeholder="请输入姓名"/>
+                    <p>这是底部文字</p>
+                </div>
             </div>
         )
     }

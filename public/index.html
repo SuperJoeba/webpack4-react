@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    
     <title>React-webpack</title>
+    <style>
+        html,
+        body,
+        form,
+        fieldset,
+        p,
+        div,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            /* pc端与移动端字体大小的问题 */
+            -webkit-text-size-adjust: 100%;
+            margin: 0;
+            padding: 0;
+            /* 长时间按住页面出现闪退 */
+            -webkit-touch-callout:none;
+            /* ios和android下触摸元素时出现半透明灰色遮罩 */
+            -webkit-tap-highlight-color:rgba(255,255,255,0);
+            /* 某些Android手机圆角失效 */
+            background-clip: padding-box;
+        }
+    </style>
 </head>
+
 <body>
-    <!-- <noscript>
+    <noscript>
         您的浏览器版本不支持JavaScript
-    </noscript> -->
+    </noscript>
     <div id="app"></div>
 </body>
+
 </html>

@@ -1,0 +1,17 @@
+.bottom-input {
+    width: 200px;
+    /* position: fixed;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    margin: auto; */
+    /* iphone及ipad下输入框默认内阴影 */
+    -webkit-appearance: none;
+}
+
+.bottom-box {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
