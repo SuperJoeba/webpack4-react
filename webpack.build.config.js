@@ -129,12 +129,12 @@ module.exports = {
             ignoreOrder: false, // Enable to remove warnings about conflicting order
         }),
         new CleanWebpackPlugin(),
-        new BundleAnalyzerPlugin({
-            analyzerMode: 'server',
-            analyzerPort: 8998,
-            generateStatsFile: true,
-            statsOptions: { source: false }
-        }),
+        // new BundleAnalyzerPlugin({
+        //     analyzerMode: 'server',
+        //     analyzerPort: 8998,
+        //     generateStatsFile: true,
+        //     statsOptions: { source: false }
+        // }),
         new CompressionPlugin({
             filename: '[path].gz[query]',
             algorithm: "gzip",
