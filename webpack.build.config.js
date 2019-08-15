@@ -135,13 +135,13 @@ module.exports = {
         //     generateStatsFile: true,
         //     statsOptions: { source: false }
         // }),
-        new CompressionPlugin({
-            filename: '[path].gz[query]',
-            algorithm: "gzip",
-            test: /\.(js|css)(\?.*)?$/i,
-            threshold: 10240,
-            minRatio: 0.8
-        })
+        // new CompressionPlugin({
+        //     filename: '[path].gz[query]',
+        //     algorithm: "gzip",
+        //     test: /\.(js|css)(\?.*)?$/i,
+        //     threshold: 10240,
+        //     minRatio: 0.8
+        // })
     ],
 
     // 性能监测
